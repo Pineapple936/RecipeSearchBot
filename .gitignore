@@ -1,0 +1,5 @@
+.venv/
+.env
+__pycache__
+bot/database/data.py
+bot/database/parsing.py
