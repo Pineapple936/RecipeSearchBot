@@ -10,7 +10,7 @@ def about_dish(dish_id: int) -> dict:
     Returns:
         dict: Information about the dish.
     """
-    connect = sqlite3.connect("bot/database/Dish.db")
+    connect = sqlite3.connect("database/Dish.db")
     cursor = connect.cursor()
     dish = dict()
 
@@ -40,7 +40,7 @@ def search_recipes(products: str) -> list[dict]:
     Returns:
         list[dict]: The search result with the response code and content.
     """
-    connect = sqlite3.connect("bot/database/Dish.db")
+    connect = sqlite3.connect("database/Dish.db")
     cursor = connect.cursor()
     products = products.lower().split(",")
     products = [products[i].strip() for i in range(len(products))]
